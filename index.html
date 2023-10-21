@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shonar Tori</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">সোনার তরী</h1>
+        <form method="post" action="https://script.google.com/macros/s/AKfycbyvpeQ8GFNfezmJHqOphXUOroHjeY7czPsL3r7iIbNpNhuSvO2bP2pH2nuhZZB5KEif/exec" id="supportLogForm" class="form">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="clientName">Client Name:</label>
+                <input type="text" id="clientName" name="clientName" required>
+            </div>
+            <div class="form-group">
+                <label for="Address">Address</label>
+                <input type="text" id="Address" name="Address" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumbers">Phone Numbers:</label>
+                <input type="tel" id="phoneNumbers" name="phoneNumbers" required>
+            </div>
+            <div class="form-group">
+                <label for="Advance">Advance (Tk)</label>
+                <input type="text" id="Advance" name="Advance" required>
+            </div>
+            <div class="form-group">
+                <label for="Due">Due (Tk)</label>
+                <input type="text" id="Due" name="Due" required>
+            </div>
+            <div class="form-group">
+                <label for="PersonQuantity">Person Quantity</label>
+                <input type="number" id="PersonQuantity" name="PersonQuantity" required>
+            </div>
+            <div class="form-group not-complete-reason">
+                <div class="toggle-container">
+                    <label class="toggle-label" onclick="toggleNotCompleteReason()">▼</label>
+                </div>
+                <div class="not-complete-reason-content hidden">
+                    <label for="Criteria">Criteria</label>
+                    <input type="text" id="Criteria" name="Criteria">
+                </div>
+                <div class="not-complete-reason-content hidden">
+                    <label for="Route">Route</label>
+                    <input type="text" id="Route" name="Route">
+                </div>
+                <div class="not-complete-reason-content hidden">
+                    <label for="Reference">Reference</label>
+                    <input type="text" id="Reference" name="Reference">
+                </div>
+                <div class="not-complete-reason-content hidden">
+                    <label for="Status">Status</label>
+                    <input type="text" id="Status" name="Status">
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleNotCompleteReason() {
+            const notCompleteReasonContent = document.querySelectorAll('.not-complete-reason-content');
+            notCompleteReasonContent.forEach((content) => content.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+
+</html>
